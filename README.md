@@ -1,6 +1,9 @@
 # labdna
 Repositório criado para hospedar os artefatos do algoritmo de analise de dnas
 
+# Observação:
+ - O diretório tmp/src foi uma estrutura criada apenas para atender o deploy da aplicação na paltaforma OpenShift.
+
 endpoints: 
 * Análise de DNA
 POST - http://labdna-labdna.7e14.starter-us-west-2.openshiftapps.com/labdna/simian <br/>
