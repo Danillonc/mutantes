@@ -2,7 +2,7 @@
 Repositório criado para hospedar os artefatos do algoritmo de analise de dnas
 
 # Observação:
- - O diretório tmp/src foi uma estrutura criada apenas para atender o deploy da aplicação na paltaforma OpenShift.
+ - O diretório tmp/src foi uma estrutura criada apenas para atender o deploy da aplicação na plataforma OpenShift.
 
 endpoints: 
 * Análise de DNA
