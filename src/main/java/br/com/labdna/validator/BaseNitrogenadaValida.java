@@ -15,7 +15,7 @@ import javax.validation.Payload;
 @Constraint(validatedBy = BaseNitrogenadaValidator.class)
 public @interface BaseNitrogenadaValida {
 
-	String message() default "{adult}";
+	String message() default "{baseDna}";
     Class<?>[] groups() default { };
     Class<? extends Payload>[] payload() default { };
 	
