@@ -1,2 +1,32 @@
 # labdna
 Repositório criado para hospedar os artefatos do algoritmo de analise de dnas
+
+endpoints: 
+* Análise de DNA
+POST - http://labdna-labdna.7e14.starter-us-west-2.openshiftapps.com/labdna/simian <br/>
+
+JSON Requisição:
+{
+   “dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]
+}
+
+* Estatísticas de dnas mutantes encontrados
+GET - http://labdna-labdna.7e14.starter-us-west-2.openshiftapps.com/labdna/stats
+
+## Maven Springboot Application + Spring Data MongoDB
+
+* Para executar esta aplicação, faça o clone deste repositório, <br/>
+* Tendo o Maven instalado em sua máquina, execute o comando "mvn clean install" na pasta raiz do projeto<br/>
+* O pacote labdna-1.0.0-SNAPSHOT.jar  do projeto será criado na pasta target<br/>
+* Tendo JRE (8 ou maior) instalada, execute o comando "java -jar labdna-1.0.0-SNAPSHOT.jar"<br/>
+* Ou pelo comando maven "mvn spring-boot:run"<br/>
+
+## Gravando as consultas de dnas na base do mongo db
+
+* Instale o mongodb seguindo o tutorial abaixo <br/>
+https://docs.mongodb.com/manual/administration/install-community/
+
+* Altere a propriedade spring.data.mongodb.uri para mongo://hostDB:port/databaseName que vocẽ criar
+
+* Uma collection no banco será criada e as análises de dna serão gravadas nesta collection para a consulta posterior no endpoint "/stats"
+
