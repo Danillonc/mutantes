@@ -21,7 +21,7 @@ import br.com.labdna.util.LabDnaUtil;
 public class SimioDnaService implements AnaliseDnaService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(SimioDnaService.class);
-	
+
 	@Autowired
 	private transient LaboratorioDnaRepository repository;
 
@@ -36,7 +36,8 @@ public class SimioDnaService implements AnaliseDnaService {
 	 * método privado responsável por fazer a analise de combinacoes de dnas
 	 * para simios.
 	 * 
-	 * @param dnas - base nitrogenada de dnas.
+	 * @param dnas
+	 *            - base nitrogenada de dnas.
 	 * @return {@link Boolean}
 	 */
 	private boolean analisaCombinacoesDnas(final String[] dnas) {
@@ -73,12 +74,19 @@ public class SimioDnaService implements AnaliseDnaService {
 		}
 		return temMutacao;
 	}
-	
-	private void prepararDnaSalvar(String[] dnas, boolean isSimio){
+
+	/**
+	 * método responsável por preparar os dados dos DNAs para armezanar na base
+	 * de dados.
+	 * 
+	 * @param dnas - String array dnas
+	 * @param isSimio - Flag indicando se foi encontrado simios na base de DNAs.
+	 */
+	private void prepararDnaSalvar(String[] dnas, boolean isSimio) {
 		LabDnaDomain dna = new LabDnaDomain();
 		dna.setDna(LabDnaUtil.converterBaseDnaParaString(dnas));
 		dna.setSimio(isSimio);
-		
+
 		try {
 			LOGGER.info("salvando DNAs das mutacoes");
 			this.repository.save(dna);

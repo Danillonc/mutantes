@@ -21,7 +21,7 @@ public class LaboratorioDnaEstatisticasService {
 	
 	/**
 	 * Método responsável por obter as estatisticas de dnas analisadas.
-	 * @return
+	 * @return {@link LabDnaStatsResponse}
 	 */
 	public LabDnaStatsResponse getEstatisticas(){
 		LabDnaStatsResponse stats = new LabDnaStatsResponse();
