@@ -2,7 +2,6 @@ package br.com.labdna.dto;
 
 import javax.validation.constraints.NotNull;
 
-import br.com.labdna.util.LabDnaConstantesUtil;
 import br.com.labdna.validator.BaseNitrogenadaValida;
 
 /**
@@ -15,7 +14,7 @@ import br.com.labdna.validator.BaseNitrogenadaValida;
 public class LabDnaRequest {
 
 	@NotNull
-	@BaseNitrogenadaValida(message = LabDnaConstantesUtil.DNA_FORA_PADRAO)
+	@BaseNitrogenadaValida
 	private String[] dna;
 
 	
