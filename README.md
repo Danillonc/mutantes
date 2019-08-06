@@ -16,6 +16,10 @@ JSON Requisição:
 * Estatísticas de dnas mutantes encontrados
 GET - http://labdna-labdna.7e14.starter-us-west-2.openshiftapps.com/labdna/stats
 
+## Compilando o projeto localmente (Maven)
+* Para executar o mvn clean install no projeto lembre-se de estar com o serviço do mongo ativo localmente na porta 27017
+* Substituir a string de conexão no arquivo application.yml para "mongodb://127.0.0.1:27017/labdna"
+
 ## Maven Springboot Application + Spring Data MongoDB
 
 * Para executar esta aplicação, faça o clone deste repositório, <br/>
